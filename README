@@ -2,7 +2,7 @@ SSL inspection is a "man-in-the-middle" (MitM) attack, where a network device in
 
 
 ❗ If you have a new device and you want to connect to the school network follow this guide.
-
+❗ If you are getting a https error (your connection is not private), follow this guide
 ❗ Before you start make sure to delete all exististing certificates as they might be expired and could cause conflict.
 
 - How it works:
@@ -76,8 +76,6 @@ Here is the lastest certificate:
 4. Restart the Browser:
     - Restart your browser to apply the changes.
 
-<aside>
-❗ If your internet stops working, forget the wifi and reconnect
-If you are getting a https error (your connection is not private), delete the old ssl certificate and reinstall the latest [ssl certificate issued by your school](https://files.catbox.moe/r1wphc.crt)
 
-</aside>
+❗ If your internet stops working, forget the wifi and reconnect
+DMCA request can be sent to temrage@cumallover.me. They will be publicly posted here and ignored since the certificate here is a public key which anyone could access.
