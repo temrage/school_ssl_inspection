@@ -17,11 +17,10 @@ SSL inspection is a "man-in-the-middle" (MitM) attack, where a network device in
     To avoid these warnings, the network device generates its own SSL/TLS certificate and presents it to the user's device.
     
 
-</aside>
 
 Here is the lastest certificate:
 
-[files.catbox.moe](https://files.catbox.moe/r1wphc.crt)
+[ssl.crt](https://github.com/temrage/school_ssl_inspection/releases/download/release/ssl.crt)
 
 # **Windows**
 
