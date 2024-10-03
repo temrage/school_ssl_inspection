@@ -10,13 +10,13 @@ SSL inspection is a "man-in-the-middle" (MitM) attack, where a network device in
     - **Decrypt Data:** It decrypts (or unlocks) the encrypted data to look for anything harmful or suspicious.
     - **Inspect Data:** The device checks the decrypted data for security threats or policy violations.
     - **Re-encrypt and Forward:** After inspection, the device re-encrypts (or locks) the data and sends it to the website, and vice versa.
+
 - **Why a Certificate is Needed:**
     
     When SSL inspection is enabled, the network device essentially acts as a "man-in-the-middle" between the user's device and the website. Without proper handling, this can trigger security warnings on the user's device, such as "Your connection is not secure." This happens because the browser detects that the certificate presented by the network device is not the original certificate from the website.
     
     To avoid these warnings, the network device generates its own SSL/TLS certificate and presents it to the user's device.
     
-
 
 Here is the lastest certificate:
 
