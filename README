@@ -1,11 +1,8 @@
 SSL inspection is a "man-in-the-middle" (MitM) attack, where a network device intercepts and decrypts your encrypted internet traffic. It’s bad for your privacy but there is no way to bypass it because it's server sided. The follwoing guide will only show you how to install a ssl certificate to ingore and bypass the annoying "Your connection is not secure." warning
 
-<aside>
+
 ❗ If you have a new device and you want to connect to the school network follow this guide.
 
-</aside>
-
-<aside>
 ❗ Before you start make sure to delete all exististing certificates as they might be expired and could cause conflict.
 
 - How it works:
