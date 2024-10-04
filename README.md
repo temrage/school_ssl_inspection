@@ -1,3 +1,15 @@
+<p align="center">
+  <img src="https://i.imgur.com/4ESXHWV.png" width="20%" alt="SCHOOL_SSL_INSPECTION-logo">
+</p>
+<p align="center">
+    <h1 align="center">SCHOOL_SSL_INSPECTION</h1>
+</p>
+<p align="center">
+	<img src="https://img.shields.io/github/license/temrage/school_ssl_inspection?style=flat&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/last-commit/temrage/school_ssl_inspection?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/temrage/school_ssl_inspection?style=flat&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/temrage/school_ssl_inspection?style=flat&color=0080ff" alt="repo-language-count">
+  
 # 🚨 SSL Inspection Bypass Guide
 
 SSL inspection is essentially a **"man-in-the-middle" (MitM)** attack, where a network device intercepts and decrypts your encrypted internet traffic. This process can jeopardize your privacy, and while it’s something you can't completely bypass due to its server-sided nature, this guide shows how to install an SSL certificate to **ignore** and **bypass** the persistent "Your connection is not secure" warnings.
