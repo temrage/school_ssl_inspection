@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.imgur.com/4ESXHWV.png" width="20%" alt="SCHOOL_SSL_INSPECTION-logo">
+  <img src="https://i.imgur.com/UypXMEo.gif" width="20%" alt="SCHOOL_SSL_INSPECTION-logo">
 </p>
 <p align="center">
     <h1 align="center">SCHOOL_SSL_INSPECTION</h1>
