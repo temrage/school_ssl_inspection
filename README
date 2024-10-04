@@ -1,80 +1,93 @@
-SSL inspection is a "man-in-the-middle" (MitM) attack, where a network device intercepts and decrypts your encrypted internet traffic. It’s bad for your privacy but there is no way to bypass it because it's server sided. The follwoing guide will only show you how to install a ssl certificate to ingore and bypass the annoying "Your connection is not secure." warning
+# 🚨 SSL Inspection Bypass Guide
 
+SSL inspection is essentially a **"man-in-the-middle" (MitM)** attack, where a network device intercepts and decrypts your encrypted internet traffic. This process can jeopardize your privacy, and while it’s something you can't completely bypass due to its server-sided nature, this guide shows how to install an SSL certificate to **ignore** and **bypass** the persistent "Your connection is not secure" warnings.
 
-❗ If you have a new device and you want to connect to the school network follow this guide.
-❗ If you are getting a https error (your connection is not private), follow this guide
-❗ Before you start make sure to delete all exististing certificates as they might be expired and could cause conflict.
+❗ **This guide is for:**  
+- New device users trying to connect to a school network.
+- Anyone receiving HTTPS errors (like "Your connection is not private").
+  
+⚠️ **Before starting**:  
+Make sure to delete all existing certificates to avoid conflicts due to expired certificates!
 
-- How it works:
-    - **Intercept Traffic:** The network device steps in between your computer and the website you’re visiting.
-    - **Decrypt Data:** It decrypts (or unlocks) the encrypted data to look for anything harmful or suspicious.
-    - **Inspect Data:** The device checks the decrypted data for security threats or policy violations.
-    - **Re-encrypt and Forward:** After inspection, the device re-encrypts (or locks) the data and sends it to the website, and vice versa.
+---
 
-- **Why a Certificate is Needed:**
-    
-    When SSL inspection is enabled, the network device essentially acts as a "man-in-the-middle" between the user's device and the website. Without proper handling, this can trigger security warnings on the user's device, such as "Your connection is not secure." This happens because the browser detects that the certificate presented by the network device is not the original certificate from the website.
-    
-    To avoid these warnings, the network device generates its own SSL/TLS certificate and presents it to the user's device.
-    
+## 🔍 **How SSL Inspection Works**:
 
-Here is the lastest certificate:
+1. **Intercept Traffic**: The network device steps in between your device and the website you’re visiting.
+2. **Decrypt Data**: The device decrypts the encrypted data to check for anything suspicious.
+3. **Inspect Data**: The decrypted data is scanned for security threats or policy violations.
+4. **Re-encrypt & Forward**: After inspection, the device re-encrypts the data and forwards it to the website, completing the loop.
 
+---
+
+## 🔑 **Why a Certificate is Needed**:
+
+When SSL inspection is enabled, the network device acts as a MitM between the user and the website. This can trigger security warnings (e.g., "Your connection is not secure") because the certificate presented by the network device isn't the website's original certificate. 
+
+To avoid these warnings, the network device generates its own SSL/TLS certificate, which you’ll need to install on your device.
+
+📥 **Download the latest certificate here:**  
 [ssl.crt](https://github.com/temrage/school_ssl_inspection/releases/download/release/ssl.crt)
 
-# **Windows**
+---
 
-1. Download the lastest certificate from your school
-2. **Open the Certificate:**
-    - Double-click the certificate file to open it.
-3. **Install the Certificate:**
-    - Click on the "Install Certificate" button.
-    - Choose to install the certificate for the "Current User"
-4. **Choose Store Location:**
-    - Select "Place all certificates in the following store."
-    - Click "Browse" and choose "Trusted Root Certification Authorities."
-    - Click "Next" and then "Finish."
-5. Restart your browser and clear cache 
-    
-    
-    # iOS
-    
-    1. Download the latest certificate from your school
-    2. **Install the Certificate:**
-        - iOS will prompt you to install a new profile.
-        - Go to Settings and tap on "Profile Downloaded".
-        - Tap "Install" in the top corner.
-        - If prompted, enter your device passcode.
-    3. **Trust the Certificate:**
-        - Go to "Settings" > "General" > "About" > "Certificate Trust Settings".
-        - Toggle the switch next to the certificate to enable full trust for the root certificate.
+## 🖥️ **Installation Instructions**
 
-# macOS
+### **Windows**:
 
-1. Download the latest certificate from your school
-2. **Install the Certificate:**
-    - Open the Certificate:
-    - Double-click the certificate file. It should open in the Keychain Access application.
-    - Add the Certificate to Keychain (1):
-    - In Keychain Access, you will be asked where to add the certificate.
-    - Select "System" keychain NOT ICLOUD
-    - Click "Add."
-    - Open the certificate again
-    - Double-click the certificate file. It should open in the Keychain Access application.
-    - Add the Certificate to Keychain (2):
-    - In Keychain Access, you will be asked where to add the certificate.
-    - Select "login" keychain NOT ICLOUD
-    - Click "Add."
-3. Set Certificate Trust Settings:
-    - In Keychain Access, find the installed certificate under the "Certificates" category.  (ca.securus-software.com)
-    - Double-click the certificate.
-    - Expand the "Trust" section.
-    - Set "When using this certificate" to "Always Trust."
-    - Close the window, and you'll be prompted to enter your administrator password to apply the changes.
-    - This must be done for both certificate installed at “System” and “login”
-4. Restart the Browser:
-    - Restart your browser to apply the changes.
+1. **Download** the latest certificate from your school.
+2. **Open the Certificate**:
+   - Double-click the certificate file to open it.
+3. **Install the Certificate**:
+   - Click "Install Certificate" and choose to install it for the "Current User".
+4. **Choose Store Location**:
+   - Select "Place all certificates in the following store".
+   - Click "Browse" and choose "Trusted Root Certification Authorities".
+   - Click "Next" and then "Finish".
+5. **Restart your browser and clear cache**.
 
+---
 
-❗ If your internet stops working, forget the wifi and reconnect
-DMCA request can be sent to temrage@cumallover.me. They will be publicly posted here and ignored since the certificate here is a public key which anyone could access.
+### 📱 **iOS**:
+
+1. **Download** the latest certificate from your school.
+2. **Install the Certificate**:
+   - iOS will prompt you to install a new profile.
+   - Go to "Settings" and tap on "Profile Downloaded".
+   - Tap "Install" in the top-right corner.
+   - If prompted, enter your device passcode.
+3. **Trust the Certificate**:
+   - Go to "Settings" > "General" > "About" > "Certificate Trust Settings".
+   - Toggle the switch next to the certificate to enable full trust.
+
+---
+
+### 🍏 **macOS**:
+
+1. **Download** the latest certificate from your school.
+2. **Install the Certificate**:
+   - Double-click the certificate file, which should open in **Keychain Access**.
+3. **Add to Keychain (System)**:
+   - In Keychain Access, select the "System" keychain (NOT iCloud).
+   - Click "Add".
+4. **Add to Keychain (Login)**:
+   - Re-open the certificate and select the "login" keychain (NOT iCloud).
+   - Click "Add".
+5. **Set Certificate Trust Settings**:
+   - In Keychain Access, find the installed certificate (e.g., `ca.securus-software.com`).
+   - Double-click it and expand the "Trust" section.
+   - Set "When using this certificate" to "Always Trust".
+   - Enter your admin password to confirm.
+   - Repeat for both "System" and "login" keychains.
+6. **Restart your browser** to apply changes.
+
+---
+
+## ⚠️ **Troubleshooting**:
+
+- If your internet connection stops working, **forget the Wi-Fi network** and reconnect.
+
+---
+
+❗ **Disclaimer**:  
+DMCA requests can be sent to [temrage@cumallover.me](mailto:temrage@cumallover.me). They will be publicly posted here and **ignored** since the certificate here is a public key that anyone can access.
