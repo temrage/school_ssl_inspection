@@ -10,9 +10,8 @@
 	<img src="https://img.shields.io/github/languages/top/temrage/school_ssl_inspection?style=flat&color=0080ff" alt="repo-top-language">
 	<img src="https://img.shields.io/github/languages/count/temrage/school_ssl_inspection?style=flat&color=0080ff" alt="repo-language-count">
   
-# 🚨 SSL Inspection Bypass Guide
-
-SSL inspection is essentially a **"man-in-the-middle" (MitM)** attack, where a network device intercepts and decrypts your encrypted internet traffic. This process can jeopardize your privacy, and while it’s something you can't completely bypass due to its server-sided nature, this guide shows how to install an SSL certificate to **ignore** and **bypass** the persistent "Your connection is not secure" warnings.
+# 🚨 Connecting to the School Network
+The school network has SSL inspection enabled to monitor encrypted traffic and block sites. This can cause security warnings on your device, such as "Your connection is not private," because the network’s SSL certificate is not trusted by default. You cannot bypass ssl inspection when using the school network because it's server sided. (you can use a vpn tho)
 
 ❗ **This guide is for:**  
 - New device users trying to connect to a school network.
@@ -21,26 +20,13 @@ SSL inspection is essentially a **"man-in-the-middle" (MitM)** attack, where a n
 ⚠️ **Before starting**:  
 Make sure to delete all existing certificates to avoid conflicts due to expired certificates!
 
----
-
-## 🔍 **How SSL Inspection Works**:
-
-1. **Intercept Traffic**: The network device steps in between your device and the website you’re visiting.
-2. **Decrypt Data**: The device decrypts the encrypted data to check for anything suspicious.
-3. **Inspect Data**: The decrypted data is scanned for security threats or policy violations.
-4. **Re-encrypt & Forward**: After inspection, the device re-encrypts the data and forwards it to the website, completing the loop.
-
----
-
 ## 🔑 **Why a Certificate is Needed**:
 
-When SSL inspection is enabled, the network device acts as a MitM between the user and the website. This can trigger security warnings (e.g., "Your connection is not secure") because the certificate presented by the network device isn't the website's original certificate. 
-
-To avoid these warnings, the network device generates its own SSL/TLS certificate, which you’ll need to install on your device.
+When SSL inspection is enabled, the network device acts as a MitM between the user and the website. This can trigger security warnings (e.g., "Your connection is not secure") because the certificate presented by the network device isn't the website's original certificate. To avoid these warnings, the school has generated its own SSL/TLS certificate, which you’ll need to install on your device.
 
 📥 **Download the latest certificate here:**  
 [ssl.crt](https://github.com/temrage/school_ssl_inspection/releases/download/release/ssl.crt)
-
+This certificate will expire on 15/4/2025, once the school releases a new one it will be updated over here.
 ---
 
 ## 🖥️ **Installation Instructions**
@@ -97,9 +83,10 @@ To avoid these warnings, the network device generates its own SSL/TLS certificat
 
 ## ⚠️ **Troubleshooting**:
 
-- If your internet connection stops working, **forget the Wi-Fi network** and reconnect.
+- If you are still getting the error make sure the certificated you installed is trusted.
+- Clear your browser cache or trying using a diffrent browser.
 
 ---
 
 ❗ **Disclaimer**:  
-DMCA requests can be sent to [temrage@cumallover.me](mailto:temrage@cumallover.me). They will be publicly posted here and **ignored** since the certificate here is a public key that anyone can access.
+DMCA requests can be sent to [temrage@cumallover.me](mailto:temrage@cumallover.me). They will be publicly posted here and **ignored** since the certificate here is public which anyone can access. 
