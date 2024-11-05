@@ -68,16 +68,12 @@ This certificate will expire on 15/4/2025, once the school releases a new one it
 3. **Add to Keychain (System)**:
    - In Keychain Access, select the "System" keychain (NOT iCloud).
    - Click "Add".
-4. **Add to Keychain (Login)**:
-   - Re-open the certificate and select the "login" keychain (NOT iCloud).
-   - Click "Add".
 5. **Set Certificate Trust Settings**:
    - In Keychain Access, find the installed certificate (e.g., `ca.securus-software.com`).
    - Double-click it and expand the "Trust" section.
    - Set "When using this certificate" to "Always Trust".
    - Enter your admin password to confirm.
-   - Repeat for both "System" and "login" keychains.
-6. **Restart your browser** to apply changes.
+6. **Restart your browser**.
 
 ---
 
